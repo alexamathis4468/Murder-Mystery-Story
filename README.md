@@ -77,3 +77,20 @@ def setup():
       rect(640,440,70,70)
     
       fill(255,255,255)
+  # code for title screen
+ def setup():
+    size(800,533)
+    global img
+    img= loadImage ("House.jpg")
+def draw():
+    global img
+    img= loadImage ("House.jpg")
+    background(img)
+    textSize(30)
+    fill(255,255,255)
+    text("CSSI Murder Mysteries",250,50)
+    fill(0)
+    rect(250,460,300,50)
+    textSize(30)
+    fill(255,255,255)
+    text("Click screen to begin", 250,460,350,50) 
