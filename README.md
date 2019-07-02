@@ -11,12 +11,11 @@ def verdictScreen():
 
 
 
-
-def setup():
+#code for questions and answers screen
+def qna():
     size(800,533)
     background(0,0,0)
     name = "Name of the game" 
-def draw():
     background(0)
     textSize(40)
     textAlign(CENTER)
