@@ -16,7 +16,8 @@ def setup():
   def qna():
       size(800,533)
       background(0,0,0)
-      name = "Name of the game" 
+      name = "Name of the game"
+      
       background(0)
       textSize(40)
       textAlign(CENTER)
@@ -25,53 +26,63 @@ def setup():
       textSize(20)
       textAlign(CENTER)
       text("Question?", 400,160)
-    
+            
       textSize(20)
       textAlign(CENTER)
       text("Response",400,260)
-    
+      
+      
       textSize(20)
       textAlign(CENTER)
       text("Who do you suspect the most?", 400, 360)
     
+      #Red Score Box 
       stroke(255,255,255)
       fill(255,0,0)
       rect(740,180,40,40)
     
       fill(0,0,0)
     
+      #Red Score 
       textSize(30)
       textAlign(CENTER)
       text("0",760,210)
     
+      #Green Score Box 
       stroke(255,255,255)
       fill(0,255,0)
       rect(740,240,40,40)
     
       fill(0,0,0)
     
+      #Green Score 
       textSize(30)
       textAlign(CENTER)
       text("0",760,270)
     
+      #Blue Score Box 
       stroke(255,255,255)
       fill(0,0,255)
       rect(740,300,40,40)
     
       fill(0,0,0)
-    
+      
+      #Blue Score 
       textSize(30)
       textAlign(CENTER)
       text("0",760,330)
-    
+      
+      #Red Choice Box 
       stroke(255,255,255)
       fill(255,0,0)
       rect(80,440,70,70)
     
+      #Green Choice Box 
       stroke(255,255,255)
       fill(0,255,0)
       rect(360,440,70,70)
-    
+      
+      #Blue Choice Box 
       stroke(255,255,255)
       fill(0,0,255)
       rect(640,440,70,70)
