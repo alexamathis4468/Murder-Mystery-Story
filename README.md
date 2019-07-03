@@ -122,6 +122,7 @@ def setup():
     , 
 
   "Connor":[ 
+  
   "My mom, Ray Ray and I were chilling on the couch. When I got up to go make a call in my room. After the call I was making my way back to the drawing room and got halfway down the stairs when I heard a scream.”,
 
 “I didn’t know much about him, seemed like a cool guy. He even hand delivered my invitation to me, so clearly he was alright. It’s sad what happened to him.”,
@@ -130,10 +131,14 @@ def setup():
     “
   My mother has always been an impatient person that always wanted her way. I wouldn’t be surprised if she was getting him out of the way early.”]
   , 
+     
+  "Maid": [
+ 
+ “I’d just finished cleaning the kitchen and went up the back steps. I was making my way to the third bathroom where I passed Connor in the hallway. While I was cleaning the bathroom I saw something out of the corner of my eye from the window facing the pool. I walked closer to get a better look when I realized something huge was floating in the pool. I rushed downstairs only to be horrified when I discovered it was Campaign Manager Lewis dead in the water.”,
+
+   “He was such a great man, I'm going to miss seeing him as I work through the house and the smell of his cologne", 
+   
+   “If I can be completely honest...we were supposed to elope. The last thing we talked about were plane tickets.”, 
     
-    
-    "Maid": [
-    “ He was such a great man, I'm going to miss seeing him as I work through the house and the smell of his cologne", 
-    “If I can be completely honest...we were supposed to elope. The last thing we talked about were plane tickets.”, 
     “Connor and Ray Ray have been awkward with each other since he got here. There was never a time where I didn’t feel  tension in the room when they were together.”
 ]}
