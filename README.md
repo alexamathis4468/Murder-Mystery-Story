@@ -93,9 +93,9 @@ def setup():
     size(800,533)
     global img
     img= loadImage ("House.jpg")
-def draw():
-    global img
-    img= loadImage ("House.jpg")
+  def draw():
+      global img
+      img= loadImage ("House.jpg")
     background(img)
     textSize(30)
     fill(255,255,255)
@@ -107,19 +107,33 @@ def draw():
     text("Click screen to begin", 250,460,350,50)
     
     
-    POV = {questions : ["Where were you between 1:30 - 2:30 am on Saturday morning?", "What was your relationship with the victim?", "What was the last conversation you had with the victim?", "Who do you suspect?"], 
-    "Shelby": [ 
+    POV = { 
+    
+    "questions" : ["Where were you between 1:30 - 2:30 am on Saturday morning?", "What was your relationship with the victim?", "What was the last conversation you had with the victim?", "Who do you suspect?"], 
+    
+    "Shelby": [
+    “My campaign manager, my son and I were talking on the couch about the banquet when Connor, you know my son Connor, went to the bathroom. Right after Ray Ray said he went to his car and I went to my office. It was maybe 10 minutes later when I heard the maid scream.”, 
+    
+    “He was exactly what the title suggested, my campaign manager, nothing more, nothing less.”, 
     
     “Our last private conversation had a lot to do with the future. Things such as re-election and if I’d ever run for a higher position in office. I told him let’s start off small, but he insisted. When I declined, he asked for a raise, so I cut the conversation short.”, 
-    “The Maid because I would always find her and Ray Ray in compromising situations; they seemed fairly comfortable with each other.”
-], 
+   
+   “The Maid because I would always find her and Ray Ray in compromising situations; they seemed fairly comfortable with each other.”]
+    , 
+
+  "Connor":[ 
+  "My mom, Ray Ray and I were chilling on the couch. When I got up to go make a call in my room. After the call I was making my way back to the drawing room and got halfway down the stairs when I heard a scream.”,
+
+“I didn’t know much about him, seemed like a cool guy. He even hand delivered my invitation to me, so clearly he was alright. It’s sad what happened to him.”,
+   
+ “Ray Ray and I had a brief conversation about business. I asked him if he had any tips, he jokingly said ‘Just knock out the person at the top.’ I thought that was weird.”,
+    “
+  My mother has always been an impatient person that always wanted her way. I wouldn’t be surprised if she was getting him out of the way early.”]
+  , 
     
-    "Connor":[ ,
-    “Ray Ray and I had a brief conversation about business. I asked him if he had any tips, he jokingly said ‘Just knock out the person at the top.’ I thought that was weird.”,
-    “My mother has always been an impatient person that always wanted her way. I wouldn’t be surprised if she was getting him out of the way early.”], 
     
     "Maid": [
-    “ He was such a great man, I'm going to miss seeing him as I work through the house and the smell of his cologne, 
+    “ He was such a great man, I'm going to miss seeing him as I work through the house and the smell of his cologne", 
     “If I can be completely honest...we were supposed to elope. The last thing we talked about were plane tickets.”, 
-    “Connor and Ray Ray have been awkward with each other since he got here. There was never a time where I didn’t feel the  tension in the room when they were together.”
+    “Connor and Ray Ray have been awkward with each other since he got here. There was never a time where I didn’t feel  tension in the room when they were together.”
 ]}
