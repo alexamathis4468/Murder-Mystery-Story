@@ -142,3 +142,11 @@ def setup():
     
     “Connor and Ray Ray have been awkward with each other since he got here. There was never a time where I didn’t feel  tension in the room when they were together.”
 ]}
+
+
+
+
+
+def mouseClicked():
+    if mouseX >= 650 or mouseY <= 75:
+        screenID=screenID+1
