@@ -150,3 +150,14 @@ def setup():
 def mouseClicked():
     if mouseX >= 650 or mouseY <= 75:
         screenID=screenID+1
+        
+        
+def mouseClicked():
+    global POV
+    if 80 <= mouseX <= 150 and 440 <= mouseY <= 510:
+        POV["Shelby"][4] = POV["Shelby"][4]+1
+    elif 360 <= mouseX <= 430 and 440 <= mouseY <= 510:
+        POV["Connor"][4] = POV["Connor"][4]+1
+    elif 640 <= mouseX <= 710 and 440 <= mouseY <= 510:
+        POV["Maid"][4] = POV["Maid"][4]+1
+
