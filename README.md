@@ -8,6 +8,10 @@ def setup():
     question = 0
     global i
     i = 0
+    global current
+    current=0
+    global choice
+    choice=""
 def draw():
     global screenID
     #global question
@@ -17,10 +21,11 @@ def draw():
         backgroundstory()
     elif screenID==2:
         qna()
-    elif screenID==3:
+    elif screenID==3 and i < 4:
         updateInfo()
-    elif screenID==6:
-        verdictScreen()
+        
+    checkgamestatus()
+    
 
     
 def startscreen():
@@ -57,11 +62,16 @@ def verdictScreen():
     office = loadImage("office2.jpg") #the image is on my desktop
     size(800,533)
     image(office,0,0,800,533)
-    textSize(50)
-    text("The Killer is...",400,200) 
+    textSize(25)
+    textAlign(CENTER)
+    #fill(0,0,0)
+    #rect(0,175,800,225)
+    fill(255,255,255)
+    text("Correct. \n The Killer is the Maid. Ray Ray and the maid had a sexual \n relationship for a long time. However, she found out the Mayor \n and Ray Ray had the same relationship. The maid was deeply in \n love with Ray Ray, yet he didn't feel the same way, causing \n her to take the knife from the kitchen and kill him.",400,200) 
     image(img2,650,0,150,75)
     
 def updateInfo():
+    global i
     fill(0,0,0)
     rect(0,60,800,325)
     fill(255,255,255)
@@ -112,7 +122,13 @@ def updateInfo():
     textAlign(CENTER)
     text(POV["Maid"][4],760,330)
     
-    
+def checkgamestatus():
+    if i == 4:
+        if POV["Maid"][4] >= 2:
+            verdictScreen()
+        else:
+            gameOver()
+        
     
 
  #code for questions and answers screen
@@ -219,21 +235,7 @@ def mouseClicked():
             print i
             
     global POV
-    if 80 <= mouseX <= 150 and 440 <= mouseY <= 510:
-        POV["Shelby"][4] = POV["Shelby"][4]+1
-    elif 360 <= mouseX <= 430 and 440 <= mouseY <= 510:
-        POV["Connor"][4] = POV["Connor"][4]+1
-    elif 640 <= mouseX <= 710 and 440 <= mouseY <= 510:
-        POV["Maid"][4] = POV["Maid"][4]+1
-        
-
-POV = {"questions":["Where were you between 1:30 - 2:30 am on Saturday morning?", "What was your relationship with the victim?", "What was the last conversation you had with the victim?", "Who do you suspect?"],
-    "Shelby":["Mayor Owens: My campaign manager, my son and I were talking on the couch about the banquet\n when Connor you know my son Connor, went to the bathroom. Right after Ray Ray said he went to his car\n and I went to my office. It was maybe 10 minutes later when I heard the maid scream.","Mayor Owens: He was exactly what the title suggested, my campaign manager, nothing more, nothing less.", "Mayor Owens: Our last private conversation had a lot to do with the future. Things such as re-election and if \n I'd ever run for a higher position in office. I told him let's start off small, but he insisted. When I \n declined, he asked for a raise, so I cut the conversation short.", "Mayor Owens: The Maid because I would always find her and Ray Ray in compromising situations; they \n seemed fairly comfortable with each other.",0],
-    "Connor":["Connor: My mom, Ray Ray and I were chilling on the couch.  When I got up to go make a call \nin my room. After the call I was making my way back to the drawing room and got halfway down \n the stairs when I heard a scream.","Connor: I didn't know much about him, seemed like a cool guy. He even hand delivered my \n invitation to me, so clearly he was alright. It's sad what happened to him.","Connor: Ray Ray and I had a brief conversation about business. I asked him if he had any tips, he \n jokingly said 'Just knock out the person at the top.' I thought that was weird.","Connor: My mother has always been an impatient person that always wanted her way. I wouldn't \n be surprised if she was getting him out of the way early.",0], 
-    "Maid":["Maid: I'd just finished cleaning the kitchen and went up the back steps. I was making my way to the\n third bathroom where I passed Connor in the hallway. While cleaning the bathroom I saw something\n out of the corner of my eye from the window facing the pool, I was horrified. I rushed downstairs and \n discovered it was Campaign Manager Lewis dead in the water.","Maid: He was such a great man, I'm going to miss seeing him as I work through the house and the \n smell of his cologne","Maid: If I can be completely honest...we were supposed to elope. The last thing we talked about were \n plane tickets.","Maid: Connor and Ray Ray have been awkward with each other since he got here. There was never a \n time where I didn't feel tension in the room when they were together.",0]}
-    
-    
- global current
+    global current
     if current == i:
         global choice
         if choice == "":
@@ -265,3 +267,27 @@ POV = {"questions":["Where were you between 1:30 - 2:30 am on Saturday morning?"
         choice = ""
 
 
+
+        
+def gameOver():
+    background(90,8,8)
+    size(800,533)
+    textAlign(CENTER)
+    textSize(70)
+    fill(255,255,255)
+    text("GAME OVER",400,230)
+
+    textAlign(CENTER)
+    textSize(30)
+    text("You have chosen the wrong suspect",400,330)
+        
+
+POV = {"questions":["Where were you between 1:30 - 2:30 am on Saturday morning?", "What was your relationship with the victim?", "What was the last conversation you had with the victim?", "Who do you suspect?"],
+    "Shelby":["Mayor Owens: My campaign manager, my son and I were talking on the couch about the banquet\n when Connor you know my son Connor, went to the bathroom. Right after Ray Ray said he went to his car\n and I went to my office. It was maybe 10 minutes later when I heard the maid scream.","Mayor Owens: He was exactly what the title suggested, my campaign manager, nothing more, nothing less.", "Mayor Owens: Our last private conversation had a lot to do with the future. Things such as re-election and if \n I'd ever run for a higher position in office. I told him let's start off small, but he insisted. When I \n declined, he asked for a raise, so I cut the conversation short.", "Mayor Owens: The Maid because I would always find her and Ray Ray in compromising situations; they \n seemed fairly comfortable with each other.",0],
+    "Connor":["Connor: My mom, Ray Ray and I were chilling on the couch.  When I got up to go make a call \nin my room. After the call I was making my way back to the drawing room and got halfway down \n the stairs when I heard a scream.","Connor: I didn't know much about him, seemed like a cool guy. He even hand delivered my \n invitation to me, so clearly he was alright. It's sad what happened to him.","Connor: Ray Ray and I had a brief conversation about business. I asked him if he had any tips, he \n jokingly said 'Just knock out the person at the top.' I thought that was weird.","Connor: My mother has always been an impatient person that always wanted her way. I wouldn't \n be surprised if she was getting him out of the way early.",0], 
+    "Maid":["Maid: I'd just finished cleaning the kitchen and went up the back steps. I was making my way to the\n third bathroom where I passed Connor in the hallway. While cleaning the bathroom I saw something\n out of the corner of my eye from the window facing the pool, I was horrified. I rushed downstairs and \n discovered it was Campaign Manager Lewis dead in the water.","Maid: He was such a great man, I'm going to miss seeing him as I work through the house and the \n smell of his cologne","Maid: If I can be completely honest...we were supposed to elope. The last thing we talked about were \n plane tickets.","Maid: Connor and Ray Ray have been awkward with each other since he got here. There was never a \n time where I didn't feel tension in the room when they were together.",0]}
+
+
+        
+    
+#POV["Shelby"][0]
